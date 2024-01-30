@@ -1034,8 +1034,12 @@ a.product__text {
   background-color: transparent;
 }
 
+.thumbnail {
+  opacity: 0.4;
+}
+
 .thumbnail:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .thumbnail.global-media-settings img {
@@ -1043,6 +1047,7 @@ a.product__text {
 }
 
 .thumbnail[aria-current] {
+  opacity: 1;
   box-shadow: 0 0 0rem 0.1rem rgb(var(--color-foreground));
   border-color: rgb(var(--color-foreground));
 }

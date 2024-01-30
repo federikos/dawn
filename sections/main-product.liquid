@@ -127,7 +127,11 @@
                   </span>
                 </p>
                 <p class="rating-count caption">
-                  <span aria-hidden="true">({{ product.metafields.reviews.rating_count | default: 0 }})</span>
+                  {% if product.metafields.reviews.rating_count %}
+                    <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+                  {% else %}
+                    <span aria-hidden="true">No Review</span>
+                  {% endif %}
                   <span class="visually-hidden">
                     {{- product.metafields.reviews.rating_count | default: 0 -}}
                     {{ 'accessibility.total_reviews' | t -}}
